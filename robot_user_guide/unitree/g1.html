@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G1 &mdash; Weston Robot v0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/hacks.css?v=a7984756" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=4c0d86c8"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Robot Manipulators" href="../manipulators.html" />
+    <link rel="prev" title="Humanoid Robots" href="../humanoid.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #323640" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../software/software.html">Software Package</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../wr_dev_kit/wr_dev_kit.html">WR Development Kit</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../robot_user_guide.html">Robot User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ugv.html">Unmanned Ground Vehicles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quadruped.html">Quadruped Robots</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../humanoid.html">Humanoid Robots</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">G1</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manipulators.html">Robot Manipulators</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../periph_user_guide/periph_user_guide.html">Peripheral User Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../toolbox/toolbox.html">WR Toolbox User Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #323640" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Weston Robot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../robot_user_guide.html">Robot User Guide</a></li>
+          <li class="breadcrumb-item"><a href="../humanoid.html">Humanoid Robots</a></li>
+      <li class="breadcrumb-item active">G1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/robot_user_guide/unitree/g1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <blockquote>
+<div></div></blockquote>
+<section id="g1">
+<h1>G1<a class="headerlink" href="#g1" title="Permalink to this heading"></a></h1>
+<section id="revision-history">
+<h2>Revision History<a class="headerlink" href="#revision-history" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Revision</p></th>
+<th class="head"><p>Date (DD/MM/YYYY)</p></th>
+<th class="head"><p>Author</p></th>
+<th class="head"><p>Changes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>22/4/2025</p></td>
+<td><p>Kang Wei</p></td>
+<td><p>Initial release</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/G1_robot.png"><img alt="../../_images/G1_robot.png" class="align-center" src="../../_images/G1_robot.png" style="width: 500px;" /></a>
+<p>The G1 is a humanoid robot that stands 130 cm tall and weighs 35 kg. It comes equipped with a LIVOX MID-360 LiDAR and an Intel RealSense D435i depth camera.</p>
+</section>
+<section id="specifications">
+<h2>2. Specifications<a class="headerlink" href="#specifications" title="Permalink to this heading"></a></h2>
+<section id="technical-specifications">
+<h3>2.1 Technical Specifications<a class="headerlink" href="#technical-specifications" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36.8%" />
+<col style="width: 31.6%" />
+<col style="width: 31.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Model</p></th>
+<th class="head"><p>G1</p></th>
+<th class="head"><p>G1-EDU</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Height, Width and Thickness (Stand)</p></td>
+<td><p>1320x450x200mm</p></td>
+<td><p>1320x450x200mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Height, Width and Thickness (Fold)</p></td>
+<td><p>690x450x300mm</p></td>
+<td><p>690x450x300mm</p></td>
+</tr>
+<tr class="row-even"><td><p>Weight (With Battery)</p></td>
+<td><p>About 35kg</p></td>
+<td><p>About 35kg</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total Degrees of Freedom (Joint Freedom)</p></td>
+<td><p>23</p></td>
+<td><p>23~43</p></td>
+</tr>
+<tr class="row-even"><td><p>Single Leg Degrees of Freedom</p></td>
+<td><p>6</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Waist Degrees of Freedom</p></td>
+<td><p>1</p></td>
+<td><p>1+ (Optional 2 additional waist degrees of freedom)</p></td>
+</tr>
+<tr class="row-even"><td><p>Single Arm Degrees of Freedom</p></td>
+<td><p>5</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Single Hand Degrees of Freedom</p></td>
+<td><p>/</p></td>
+<td><p>7 (Optional Force control of three-fingered hand) + 2 (Optional 2 additional wrist degrees of freedom)</p></td>
+</tr>
+<tr class="row-even"><td><p>Joint Output Bearing</p></td>
+<td><p>Industrial grade crossed roller bearings (high precision, high load capacity)</p></td>
+<td><p>Industrial grade crossed roller bearings (high precision, high load capacity)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Joint Motor</p></td>
+<td><p>Low inertia high-speed internal rotor PMSM (better response speed and heat dissipation)</p></td>
+<td><p>Low inertia high-speed internal rotor PMSM (better response speed and heat dissipation)</p></td>
+</tr>
+<tr class="row-even"><td><p>Maximum Torque of Knee Joint [1]</p></td>
+<td><p>90N.m</p></td>
+<td><p>120N.m</p></td>
+</tr>
+<tr class="row-odd"><td><p>Arm Maximum Load [2]</p></td>
+<td><p>About 2Kg</p></td>
+<td><p>About 3Kg</p></td>
+</tr>
+<tr class="row-even"><td><p>Calf + Thigh Length</p></td>
+<td><p>0.6M</p></td>
+<td><p>0.6M</p></td>
+</tr>
+<tr class="row-odd"><td><p>Arm Span</p></td>
+<td><p>About 0.45M</p></td>
+<td><p>About 0.45M</p></td>
+</tr>
+<tr class="row-even"><td><p>Extra Large Joint Movement Space</p></td>
+<td><div class="line-block">
+<div class="line">Waist joint: Z±155°</div>
+<div class="line">Knee joint: 0~165°</div>
+<div class="line">Hip joint: P±154°, R-30~+170°, Y±158°</div>
+</div>
+</td>
+<td><div class="line-block">
+<div class="line">Waist joint: Z±155°, X±45°, Y±30°</div>
+<div class="line">Knee joint: 0~165°</div>
+<div class="line">Hip joint: P±154°, R-30~+170°, Y±158°</div>
+<div class="line">Wrist joint: P±92.5°, Y±92.5°</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Full Joint Hollow Electrical Routing</p></td>
+<td><p>YES</p></td>
+<td><p>YES</p></td>
+</tr>
+<tr class="row-even"><td><p>Joint Encode</p></td>
+<td><p>Dual encoder</p></td>
+<td><p>Dual encoder</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cooling System</p></td>
+<td><p>Local air cooling</p></td>
+<td><p>Local air cooling</p></td>
+</tr>
+<tr class="row-even"><td><p>Power Supply</p></td>
+<td><p>13 string lithium battery</p></td>
+<td><p>13 string lithium battery</p></td>
+</tr>
+<tr class="row-odd"><td><p>Basic Computing Power</p></td>
+<td><p>8-core high-performance CPU</p></td>
+<td><p>8-core high-performance CPU</p></td>
+</tr>
+<tr class="row-even"><td><p>Sensing Sensor</p></td>
+<td><p>Depth Camera + 3D LiDAR</p></td>
+<td><p>Depth Camera + 3D LiDAR</p></td>
+</tr>
+<tr class="row-odd"><td><p>4 Microphone Array</p></td>
+<td><p>YES</p></td>
+<td><p>YES</p></td>
+</tr>
+<tr class="row-even"><td><p>5W Speaker</p></td>
+<td><p>YES</p></td>
+<td><p>YES</p></td>
+</tr>
+<tr class="row-odd"><td><p>WiFi 6, Bluetooth 5.2</p></td>
+<td><p>YES</p></td>
+<td><p>YES</p></td>
+</tr>
+<tr class="row-even"><td><p>High Computing Power Module</p></td>
+<td><p>/</p></td>
+<td><p>NVIDIA Jetson Orin</p></td>
+</tr>
+<tr class="row-odd"><td><p>Smart Battery (Quick Release)</p></td>
+<td><p>9000mAh</p></td>
+<td><p>9000mAh</p></td>
+</tr>
+<tr class="row-even"><td><p>Charger</p></td>
+<td><p>54V 5A</p></td>
+<td><p>54V 5A</p></td>
+</tr>
+<tr class="row-odd"><td><p>Manual Controller</p></td>
+<td><p>YES</p></td>
+<td><p>YES</p></td>
+</tr>
+<tr class="row-even"><td><p>Battery Life</p></td>
+<td><p>About 2h</p></td>
+<td><p>About 2h</p></td>
+</tr>
+<tr class="row-odd"><td><p>Upgraded Intelligent OTA</p></td>
+<td><p>YES</p></td>
+<td><p>YES</p></td>
+</tr>
+<tr class="row-even"><td><p>Secondary Development [3]</p></td>
+<td><p>/</p></td>
+<td><p>YES</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="electrical-interfaces">
+<h3>2.2 Electrical Interfaces<a class="headerlink" href="#electrical-interfaces" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/G1_electrical_interfaces.jpg"><img alt="../../_images/G1_electrical_interfaces.jpg" class="align-center" src="../../_images/G1_electrical_interfaces.jpg" style="width: 400px;" /></a>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 5.0%" />
+<col style="width: 20.0%" />
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>No.</p></th>
+<th class="head"><p>Connector Name</p></th>
+<th class="head"><p>Interface Description for short</p></th>
+<th class="head"><p>Interface specification</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>XT30UPB-F</p></td>
+<td><p>VBAT</p></td>
+<td><p>58V/5A Battery power output (directly connected to battery power here)</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>XT30UPB-F</p></td>
+<td><p>24V</p></td>
+<td><p>24V/5A power output</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>XT30UPB-F</p></td>
+<td><p>12V</p></td>
+<td><p>12V/5A power output</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>RJ45</p></td>
+<td><p>1000 BASE-T</p></td>
+<td><p>GbE (gigabit Ethernet)</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>RJ45</p></td>
+<td><p>1000 BASE-T</p></td>
+<td><p>GbE (gigabit Ethernet)</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Type-C</p></td>
+<td><p>Type-C</p></td>
+<td><p>Support USB3.0 host, 5V/1.5A power output</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Type-C</p></td>
+<td><p>Type-C</p></td>
+<td><p>Support USB3.0 host, 5V/1.5A power output</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Type-C</p></td>
+<td><p>Type-C</p></td>
+<td><p>Support USB3.0 host, 5V/1.5A power output</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Type-C</p></td>
+<td><p>Alt Mode Type-C</p></td>
+<td><p>Supports USB3.2 host and DP1.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>5577</p></td>
+<td><p>I/O OUT</p></td>
+<td><p>12V: 12V/3A power output
+See the following table for GPIO details</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/G1_electrical_interfaces_gpio.jpg"><img alt="../../_images/G1_electrical_interfaces_gpio.jpg" class="align-center" src="../../_images/G1_electrical_interfaces_gpio.jpg" style="width: 400px;" /></a>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11.8%" />
+<col style="width: 17.6%" />
+<col style="width: 35.3%" />
+<col style="width: 35.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>GPIO Number</p></th>
+<th class="head"><p>NX Pin Number</p></th>
+<th class="head"><p>Multiplexing Relationship</p></th>
+<th class="head"><p>Pin name of the debugfs file system</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GPIO1</p></td>
+<td><p>203</p></td>
+<td><p>UART1_TXD</p></td>
+<td><p>GPIO3_PR.02</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO2</p></td>
+<td><p>205</p></td>
+<td><p>UART1_RXD</p></td>
+<td><p>GPIO3_PR.03</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO3</p></td>
+<td><p>232</p></td>
+<td><p>I2C2_SCL</p></td>
+<td><p>GPIO3_PI.03</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO4</p></td>
+<td><p>234</p></td>
+<td><p>I2C2_SDA</p></td>
+<td><p>GPIO3_PI.04</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO5</p></td>
+<td><p>128</p></td>
+<td><p>GPIO</p></td>
+<td><p>GPIO3_PCC.02</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO6</p></td>
+<td><p>130</p></td>
+<td><p>GPIO</p></td>
+<td><p>GPIO3_PCC.03</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are many ways to operate NVIDIA GPIO, refer to this <a class="reference external" href="https://docs.nvidia.com/jetson/archives/r35.2.1/DeveloperGuide/text/HR/JetsonModuleAdaptationAndBringUp/JetsonOrinNxSeries.html#identifying-the-gpio-number">link</a> for the definition.</p>
+</div>
+</section>
+<section id="on-board-computer">
+<h3>2.3 On-board Computer<a class="headerlink" href="#on-board-computer" title="Permalink to this heading"></a></h3>
+<p>G1 Edu has 2 onboard computers:</p>
+<ul class="simple">
+<li><p>Operation &amp; Control computing unit (Not accessible to public)</p>
+<ul>
+<li><p>IP: 192.168.123.161</p></li>
+</ul>
+</li>
+<li><p>User development computing unit</p>
+<ul>
+<li><p>IP: 192.168.123.164</p></li>
+<li><p>Username: unitree</p></li>
+<li><p>Password: Unitree0408</p></li>
+</ul>
+</li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Development Computing Unit</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Model</p></td>
+<td><p>Jetson Orin NX</p></td>
+</tr>
+<tr class="row-odd"><td><p>CPU</p></td>
+<td><p>Arm® Cortex®-A78AE</p></td>
+</tr>
+<tr class="row-even"><td><p>Number of cores</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Number of threads</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>Max largest rate</p></td>
+<td><p>2 GHz</p></td>
+</tr>
+<tr class="row-odd"><td><p>Graphic memory</p></td>
+<td><p>16G</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory</p></td>
+<td><p>16G</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cache</p></td>
+<td><p>2MB L2 + 4MB L3</p></td>
+</tr>
+<tr class="row-even"><td><p>Storage</p></td>
+<td><p>2T</p></td>
+</tr>
+<tr class="row-odd"><td><p>Intel® Image Processing Unit</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>GPU</p></td>
+<td><p>1024 NVIDIA Ampere architecture GPUs with 32 Tensor cores</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maximum dynamic frequency of graphics card</p></td>
+<td><p>918 MHz</p></td>
+</tr>
+<tr class="row-even"><td><p>Gaussian and Neuro Accelerator</p></td>
+<td><p>3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Intel® Deep Learning Promotion</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>Intel® Adaptix™ Technology</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Intel® Hyperthreading Technology</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>Instructions set</p></td>
+<td><p>64bit</p></td>
+</tr>
+<tr class="row-odd"><td><p>OpenGL</p></td>
+<td><p>4.6</p></td>
+</tr>
+<tr class="row-even"><td><p>OpenCL</p></td>
+<td><p>3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>DirectX</p></td>
+<td><p>12.1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="resources">
+<h2>3. Resources<a class="headerlink" href="#resources" title="Permalink to this heading"></a></h2>
+<section id="basic-guides">
+<h3>Basic Guides<a class="headerlink" href="#basic-guides" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>G1 Manual: <a class="reference external" href="https://support.unitree.com/home/en/G1_developer">Unitree</a></p></li>
+<li><p>Training Slides: <a class="reference external" href="https://tangrobot.sharepoint.com/:b:/s/Public-Outgoing/EYW7e2v3tL1DtCeW-HGdQo8BlBn-CkYQve05OhJDlS7xcA?e=5kJQpt">G1 Basic Training</a></p></li>
+</ul>
+</section>
+<section id="development">
+<h3>Development<a class="headerlink" href="#development" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>SDK Support: <a class="reference external" href="https://github.com/unitreerobotics/unitree_sdk2">unitree_sdk2</a></p></li>
+<li><p>ROS2 Support: <a class="reference external" href="https://github.com/unitreerobotics/unitree_ros2">unitree_ros2</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../humanoid.html" class="btn btn-neutral float-left" title="Humanoid Robots" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../manipulators.html" class="btn btn-neutral float-right" title="Robot Manipulators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Weston Robot Pte Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
