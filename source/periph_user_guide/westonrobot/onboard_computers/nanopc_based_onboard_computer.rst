@@ -14,6 +14,8 @@ Revision History
 +----------+-------------------+-------------+---------------------------------------------------------+
 | 2        | 16/5/2024         | Ruixiang Du | Added information about the RS232-2 port reconfiguration|
 +----------+-------------------+-------------+---------------------------------------------------------+
+| 3        | 23/4/2025         | Kang Wei    | Added reflash guide                                     |
++----------+-------------------+-------------+---------------------------------------------------------+
 
 This onboard computer is based on NanoPC-T6. We extended the board with industrial ports for easy and reliable interfacing with commonly used sensors and robot bases. Drivers to the ports are pre-configured under Ubuntu 22.04.
 
@@ -98,3 +100,8 @@ You can also add the following configuration to ``/etc/network/interfaces`` to m
 
 .. warning::
     Please note that the 5V output is limited by a resettable fuse rated at **300mA**. So please make sure the total current consumption of all devices connected to the 5V outputs does not exceed 300mA.
+
+After-Sales Support
+===================
+* NanoPC-T6 LTS Reflash Guide: `PDF <https://tangrobot.sharepoint.com/:b:/s/Public-Outgoing/Eaohvt0uvBtCtiCjqUuFGkUBL2xNjZGC8CtCYIG38VJDlg?e=e0v8yd>`_
+
