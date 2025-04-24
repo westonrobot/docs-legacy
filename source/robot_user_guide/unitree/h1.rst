@@ -1,0 +1,95 @@
+****
+H1-2
+****
+
+Revision History
+================
+
++----------+-------------------+-------------+------------------------------------------------------+
+| Revision | Date (DD/MM/YYYY) | Author      | Changes                                              |
++==========+===================+=============+======================================================+
+| 1        | 24/4/2025         | Kang Wei    | Initial release                                      |
++----------+-------------------+-------------+------------------------------------------------------+
+
+1. Overview
+===========
+
+.. image:: figures/H1-2_robot.png
+    :width: 500 px
+    :align: center
+
+The H1 is Unitree's first general-purpose humanoid robot. It stands 180 cmm tall and weighs 72 kg. It comes equipped with a LIVOX MID-360 LiDAR and an Intel RealSense D435i depth camera.
+
+2. Specifications
+=================
+H1-2 has been upgraded based on the H1 model, boasting enhanced motion capability and degrees of freedom. Each arm of the H1-2 possesses 7 degrees of freedom, each leg has 6, and the waist features 1 degree of freedom. A total of 27 degrees of freedom across the entire machine. Comprised of 27 joint motors, this configuration enables the robot to achieve precise motion control and posture manipulation.
+
+.. image:: figures/H1-2_overview.png
+    :width: 500 px
+    :align: center
+
+.. list-table::
+   :widths: 25 25
+   
+   * - Key Dimensions
+     - (1503+285)mm × 510mm × 287mm
+   * - Thigh and Calf Length
+     - 800mm
+   * - Arm Length
+     - 685mm
+   * - Single Leg Degrees of Freedom
+     - Hip joint × 3 + Knee joint × 1 + Ankle joint × 2 = 6
+   * - Single Arm Degrees of Freedom
+     - 7 (Expandable)
+   * - Weight
+     - Approximately 72kg
+   * - Joint Unit Maximum Torque
+     - Knee joint approx. 360N·m, Hip joint approx. 220N·m, Ankle joint approx. 45N·m, Arm joint approx. 75N·m
+   * - Walking Speed
+     - Moving speed of 3.3m/s, Potential mobility > 5m/s
+   * - Battery
+     - Capacity 15Ah (0.864KWh), Maximum voltage 67.2V
+   * - Control and Perception Computing Power
+     - | 1 x Intel Core i5-1235U + 1 x Intel Core i7-1255U/1265U 
+       | (Additional Configurations: Intel Core i7 or Nvidia Jetson Orin NX)
+   * - Perception Sensor Configuration
+     - 3D Lidar + Depth Camera
+   * - Dexterous Hand
+     - Optional
+
+2.1 Electrical Interfaces
+-------------------------
+The H1-2 robot is equipped with electrical interfaces on its right side, which are used to connect various body joint motors, sensor peripherals, Ethernet ports, etc. This design allows for convenient debugging, issue troubleshooting, and secondary development.
+
+.. image:: figures/H1-2_electrical_interfaces.png
+    :width: 700 px
+    :align: center
+
+2.2 On-board Computer
+---------------------
+H1-2 comes with 2 on-board computers, additional computing unit can be optionally configured:
+
+- Motion control computing unit (Not accessible to public)
+
+  - IP: 192.168.123.161
+
+- User development computing unit
+
+  - IP: 192.168.123.164
+  - Username: unitree
+  - Password: Unitree0408
+
+3. Resources
+============
+
+Basic Guides
+------------
+
+* H1-2 Manual: `Unitree <https://support.unitree.com/home/en/H1_developer/About_H1-2>`_
+.. * Training Slides: `G1 Basic Training <>`_
+
+Development
+-----------
+
+* SDK Support: `unitree_sdk2 <https://github.com/unitreerobotics/unitree_sdk2>`_
+* ROS2 Support: `unitree_ros2 <https://github.com/unitreerobotics/unitree_ros2>`_
